@@ -6,8 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print GitHub Token
-        env:
-          MY_TOKEN: ${{ secrets.private_key }}
         run: |
-          echo "Token is: $MY_TOKEN"
+          TOKEN=${{ secrets.MY_TOKEN }}
+          echo "Actual token: $TOKEN"
 
