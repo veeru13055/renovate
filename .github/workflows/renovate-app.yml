@@ -1,0 +1,24 @@
+name: Renovate
+on:
+  workflow_dispatch:
+jobs:
+  renovate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get token
+        id: get_token
+        uses: actions/create-github-app-token@v1
+        with:
+          private-key: ${{ secrets.private_key }}
+          app-id: 1999498
+          owner: ${{ github.repository_owner }}
+          repositories: 'renovate'
+
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+
+      - name: Self-hosted Renovate
+        uses: renovatebot/github-action@v43.0.13
+        with:
+          configurationFile: example/renovate-config.js
+          token: '${{ steps.get_token.outputs.token }}'
