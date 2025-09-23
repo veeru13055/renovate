@@ -4,9 +4,9 @@ module.exports = {
   gitAuthor: 'Renovate Bot <bot@renovateapp.com>',
   onboarding: false,
   platform: 'github',
-  autodiscover: True
   forkProcessing: 'enabled',
   dryRun: 'full',
+  repositories: ['veeru13055/renovate'],
   packageRules: [
     {
       description: 'lockFileMaintenance',
