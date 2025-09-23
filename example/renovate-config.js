@@ -5,7 +5,7 @@ module.exports = {
   onboarding: false,
   platform: 'github',
   forkProcessing: 'enabled',
-  dryRun: 'full',
+  dryRun: 'false',
   repositories: ['veeru13055/renovate'],
   packageRules: [
     {
