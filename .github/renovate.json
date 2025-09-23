@@ -1,0 +1,11 @@
+{
+  "extends": ["config:base"],
+  "enabledManagers": ["dockerfile"],
+  "fileMatch": ["^Dockerfile$", "^docker-compose\\.yml$"],
+  "packageRules": [
+    {
+      "packagePatterns": ["*"],
+      "groupName": "all docker updates"
+    }
+  ]
+}
