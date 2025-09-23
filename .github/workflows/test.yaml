@@ -7,6 +7,6 @@ jobs:
     steps:
       - name: Print GitHub Token
         run: |
-          TOKEN=${{ secrets.MY_TOKEN }}
+          TOKEN=${{ secrets.private_key }}
           echo "Actual token: $TOKEN"
 
