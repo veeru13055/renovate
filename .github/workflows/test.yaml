@@ -1,0 +1,13 @@
+name: test
+on:
+  workflow_dispatch:
+jobs:
+  print-token:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print GitHub Token
+        env:
+          MY_TOKEN: ${{ secrets.private_key }}
+        run: |
+          echo "Token is: $MY_TOKEN"
+
