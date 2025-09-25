@@ -5,7 +5,6 @@ module.exports = {
   onboarding: false,
   platform: 'github',
   forkProcessing: 'enabled',
-  autodiscover: true,
   packageRules: [
     {
       description: 'lockFileMaintenance',
