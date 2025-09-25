@@ -7,6 +7,16 @@ module.exports = {
   forkProcessing: 'enabled',
   autodiscover: true,
   requireConfig: false,
+  regexManagers: [
+    {
+      fileMatch: ['.*\\.ya?ml$'],
+      matchStrings: [
+        'image:\\s*(?<depName>[\\w./-]+):(?<currentValue>[\\w.-]+)'
+      ],
+      datasourceTemplate: 'docker'
+    }
+  ]
+
   packageRules: [
     {
       description: 'lockFileMaintenance',
