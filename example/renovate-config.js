@@ -15,8 +15,7 @@ module.exports = {
       ],
       datasourceTemplate: 'docker'
     }
-  ]
-
+  ],
   packageRules: [
     {
       description: 'lockFileMaintenance',
