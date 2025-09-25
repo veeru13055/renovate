@@ -22,5 +22,3 @@ jobs:
         with:
           token: '${{ steps.get_token.outputs.token }}'
           configurationFile: example/renovate-config.js
-        env:
-          LOG_LEVEL: 'debug'
